@@ -5,3 +5,5 @@ npm-debug.log
 tmp
 Resources
 .settings
+.fastdev.lock
+.project
