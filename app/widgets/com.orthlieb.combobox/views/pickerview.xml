@@ -1,0 +1,15 @@
+<Alloy>
+	<Popover id='popover' ns="Ti.UI.iPad" platform="ios" formFactor="tablet">
+		<Button id="cancel">Cancel</Button>
+		<Button id="done">Done</Button>
+		<Picker id="picker"/>
+	</Popover>
+
+	<View id="pickerview" platform="ios" formFactor="handheld">
+		<View id="toolbar">
+			<Button id="cancel">Cancel</Button>
+			<Button id="done">Done</Button>
+		</View>
+		<Picker id="picker"/>
+	</View>
+</Alloy>

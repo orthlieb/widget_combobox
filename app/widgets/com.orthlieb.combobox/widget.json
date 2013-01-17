@@ -1,0 +1,16 @@
+{
+	"id": "com.orthlieb.combobox",
+	"name": "com.orthlieb.combobox",
+	"description" : "",
+	"author": "",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2012",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,ios,mobileweb",
+	"dependencies": {
+		"com.orthlieb.pickerview": "1.0"
+	}
+}

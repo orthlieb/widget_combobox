@@ -1,0 +1,7 @@
+"#dropbutton[platform=ios]": {
+    right : 0,
+    bottom : 0,
+    width : Ti.UI.SIZE,
+    height : Ti.UI.SIZE,
+    style : Ti.UI.iPhone.SystemButton.DISCLOSURE
+}
