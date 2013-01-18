@@ -74,12 +74,12 @@ var colors = {
     red: { title: "Red", rgb: "#FF0000" },
     orange: { title: "Orange", rgb: "#FF7F00" },
     brown: { title: "Brown", rgb: "#964B00" },
-    yellow: { title: "Yellow", rgb: "FFFF00" },
-    gray: { title: "Gray", rgb: "848484" },
+    yellow: { title: "Yellow", rgb: #FFFF00" },
+    gray: { title: "Gray", rgb: "#848484" },
     green: { title: "Green", rgb: "#00FF00" },
-    cyan: { title: "Cyan", rgb: "00FFFF" },
-    blue: { title: "Blue", rgb: "0000FF" }, 
-    violet: { title: "Violet", rgb: "9400D3" }
+    cyan: { title: "Cyan", rgb: "#00FFFF" },
+    blue: { title: "Blue", rgb: "#0000FF" }, 
+    violet: { title: "Violet", rgb: "#9400D3" }
 };
 
 $.color.init({ 
