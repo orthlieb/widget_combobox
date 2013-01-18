@@ -88,7 +88,7 @@ $.color.init({
     right: 5, 
     height: Ti.UI.SIZE, 
     borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-    hintText: 'Select a Color' 
+    hintText: 'Select a Color'
 }, colors, $.color.id);
 
 $.color.on('change', function (event) {

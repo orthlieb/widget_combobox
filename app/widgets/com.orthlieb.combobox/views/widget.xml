@@ -1,7 +1,5 @@
 <Alloy>
-    <View platform="ios">
-    	<TextField platform="ios" id="field" onClick="DropButtonClick"/>
-    	<Button platform="ios" id="dropbutton" onClick="DropButtonClick"/>
-	</View>
+	<TextField platform="ios" id="field" onClick="DropButtonClick"/>
+	<Button platform="ios" id="dropbutton" onClick="DropButtonClick"/>
     <View platform="android,mobileweb" id="field"/>
 </Alloy>
