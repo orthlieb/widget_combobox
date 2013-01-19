@@ -1,20 +1,20 @@
-![Header](docs/img/header.png)
+![Header](https://github.com/orthlieb/widget_combobox/tree/master/docs/img/header.png)
 # Combobox Widget Sample
 
 The **Combobox** widget provides a field that allows the user to pick from a list of items.   
 
 On iPhone, this manifests itself as field that is clicked on to produce a picker control.
 
-![iPhone Picker](docs/img/Screen Shot 1.png)
+![iPhone Picker](https://github.com/orthlieb/widget_combobox/tree/master/docs/img/Screen%20Shot%201.png)
 
 On iPad, clicking on the field produces a popup with a picker inside.
 
-![iPad Popover](docs/img/Screen Shot 2.png)
+![iPad Popover](https://github.com/orthlieb/widget_combobox/tree/master/docs/img/Screen%20Shot%202.png)
 
 On Android, this is a plain picker control.
 
-![Android Picker](docs/img/Screen Shot 3.png)
-![Android Picker](docs/img/Screen Shot 4.png)
+![Android Picker](https://github.com/orthlieb/widget_combobox/tree/master/docs/img/Screen%20Shot%203.png)
+![Android Picker](https://github.com/orthlieb/widget_combobox/tree/master/docs/img/Screen%20Shot%204.png)
 
 ##Manifest
 * Version: 1.0 (stable)
