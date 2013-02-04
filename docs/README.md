@@ -110,8 +110,8 @@ $.color.init({
 
 There are lots of features that can be added to the Combobox:
 
-* Supporting multiple selection.
-* Allowing the user to type in a choice in addition to the choices provided in the dropdown.
+* Supporting multiple selection and searching within the choices. There's a great example of this [here](http://harvesthq.github.com/chosen/).
+* Allowing the user to type in there own value in addition to the choices provided in the dropdown.
 * Support for other platforms like Mobile Web and Blackberry.
 
 
