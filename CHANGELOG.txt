@@ -1,1 +1,2 @@
-1/18/2013 orthlieb Version 1.0: Initial commit
+01/18/2013 orthlieb Version 1.0: Initial commit
+02/04/2013 orthlieb Version 1.1: Remove dependency on Alloy.Globals.mainWindow (evil) and use a parameter instead. Also support parent styling through .tss file.
