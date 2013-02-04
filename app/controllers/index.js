@@ -55,14 +55,7 @@ var countries = {
 	esh: { title: 'Western Sahara' }, yem: { title: 'Yemen' }, zmb: { title: 'Zambia' }, zwe: { title: 'Zimbabwe' } 
 }
 
-$.country.init({ 
-	left: 5, 
-	top: 5, 
-	right: 5, 
-	height: Ti.UI.SIZE, 
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-	hintText: 'Select a Country' 
-}, countries, $.country.id);
+$.country.init({ choices: countries, id: $.country.id, parentView: $.getView() });
 
 $.country.on('change', function (event) {
 	alert('Country changed: ' + event.id + " => " + event.value);
@@ -82,19 +75,10 @@ var colors = {
     violet: { title: "Violet", rgb: "#9400D3" }
 };
 
-$.color.init({ 
-    left: 40    , 
-    top: 40, 
-    right: 5, 
-    height: Ti.UI.SIZE, 
-    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-    hintText: 'Select a Color'
-}, colors, $.color.id);
+$.color.init({ choices: colors, id: $.color.id, parentView: $.getView() });
 
 $.color.on('change', function (event) {
     $.swatch.backgroundColor = colors[event.id].rgb;
 });
-
-Alloy.Globals.mainWindow = $.getView();
 
 $.index.open();

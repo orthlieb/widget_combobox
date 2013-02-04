@@ -15,4 +15,22 @@
     height: 30,
     borderColor: "black",
     backgroundColor: "black"    
+},
+
+"#country": {
+    left: 5, 
+    top: 5, 
+    right: 5, 
+    height: Ti.UI.SIZE, 
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
+    hintText: 'Select a Country' 
+},
+
+"#color": {
+    left: 40, 
+    top: 40, 
+    right: 5, 
+    height: Ti.UI.SIZE, 
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
+    hintText: 'Select a Color'
 }

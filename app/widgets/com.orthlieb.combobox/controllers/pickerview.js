@@ -1,7 +1,9 @@
 // Load up the picker. We also populate an id entry to allow for easy back mapping on the trigger.
 var choices = arguments[0].choices, id = arguments[0].id;
 $.title = arguments[0].title;
-$.parent = arguments[0].parent;
+$.parentField = arguments[0].parentField;
+$.parentView = arguments[0].parentView;
+
 var rows = [], i, count = -1, selected = -1;
 for (i in choices) {
 	choices[i].id = i;
@@ -45,7 +47,7 @@ exports.open = function (choices, id) {
         });
         if (!Alloy.isTablet) {
             $.pickerview.animate({ bottom: -Ti.Platform.displayCaps.platformHeight, duration: 500 });   
-            Alloy.Globals.mainWindow.remove($.pickerview);
+            $.parentView.remove($.pickerview);
         } else {
             $.popover.hide({ animated:true });
         }
@@ -55,12 +57,12 @@ exports.open = function (choices, id) {
     $.done.on("click", PickerButtonClick);
     
 	if (!Alloy.isTablet) {
-		Alloy.Globals.mainWindow.add($.pickerview);
+		$.parentView.add($.pickerview);
 		$.pickerview.animate({ bottom: 0, duration: 500 });
 	} else {
 		$.popover.show({ 
 			animated:true,
-			view: $.parent 
+			view: $.parentField 
 		 });
 	}
 	$.picker.selectionIndicator = true;

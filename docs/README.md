@@ -17,7 +17,7 @@ On Android, this is a plain picker control.
 ![Android Picker](https://github.com/orthlieb/widget_combobox/blob/master/docs/img/Screen%20Shot%204.png?raw=true)
 
 ##Manifest
-* Version: 1.0 (stable)
+* Version: 1.1 (stable)
 * Github: https://www.github.com/orthlieb/widget_combobox
 * License: [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 * Author: Carl Orthlieb
@@ -29,7 +29,7 @@ On Android, this is a plain picker control.
 
 ```
 "dependencies": {
-    "com.orthlieb.combobox":"1.0"
+    "com.orthlieb.combobox":"1.1"
 }
 ```
 
@@ -43,9 +43,32 @@ You can add a Combobox to a view by *requiring* the Combobox widget.
 
 Assign it an ID that you can use in your controller. E.g. `id="color"` You can now access the Combobox via `$.color` in your controller. 
 
+## Position and Style the Combobox
+In your .tss file for the view, you can style and position your combobox as you would any other control, using any valid properties for [Ti.UI.TextField](http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.TextField).
+
+```
+"#country": {
+    left: 5, 
+    top: 5, 
+    right: 5, 
+    height: Ti.UI.SIZE, 
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
+    hintText: 'Select a Country' 
+},
+
+"#color": {
+    left: 40, 
+    top: 40, 
+    right: 5, 
+    height: Ti.UI.SIZE, 
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
+    hintText: 'Select a Color'
+}
+```
+
 ## Initializing the Combobox in the Controller
 
-The combobox doesn't have any choices or selection until you initialize it in your controller. Before you open your window, you will want to call the combobx with the *init* method. For example:
+The combobox doesn't have any choices or selection until you initialize it in your controller. Before you open your window, you will want to call the combobox with the *init* method. For example:
 
 ```
 var colors = { 
@@ -63,21 +86,19 @@ var colors = {
 };
 
 $.color.init({ 
-    left: 40    , 
-    top: 40, 
-    right: 5, 
-    height: Ti.UI.SIZE, 
-    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-    hintText: 'Select a Color'
+	choices: colors,
+	id: $.color.id
 }, colors, $.color.id);
 ```
 ### Initialization Parameters
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| properties | *object* | You can use any of the properties in the [Ti.UI.TextField](http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.TextField) object to position and style the combobox. |
-| choices | *object* | An object containing key/value pairs of choices to present to the user. The value is an object containing a required title and any other private data you wish access to. |
-| id | *string* | *Optional.* Selected id in choices to initialize the combobox with. Default: undefined. |
+| args | *object* | An object containing the arguments for initialization. |
+| [args.*parameters*] | *various* | Any valid [Ti.UI.TextField](http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.UI.TextField) key/value pairs that you want applied to the combobox appearance. It is recommended that you set these in the parent tss file where possible. |
+| args.parentView | *Ti.UI.View* | Top level view to display the picker in. Previously this was Alloy.Globals.mainWindow but for obvious reasons this has deprecated. |
+| [args.choices] | *object* | An object containing key/value pairs of choices to present to the user. The value is an object containing a required title and any other private data you wish access to. You can also use the *choices* property of the widget. |
+| [args.id] | *string* | *Optional.* Selected id in choices to initialize the combobox with. You can also use the id property of the widget. |
 
 ## Accessible Properties and Methods
 | Properties | Type | Description |
