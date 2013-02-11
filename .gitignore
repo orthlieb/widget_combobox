@@ -8,3 +8,4 @@ Resources
 .fastdev.lock
 .project
 manifest
+plugins/ti.alloy/hooks/alloy.js
