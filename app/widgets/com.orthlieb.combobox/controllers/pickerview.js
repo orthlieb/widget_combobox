@@ -28,34 +28,32 @@ if (!Alloy.isTablet) {
 if (selected != -1)
 	$.picker.setSelectedRow(0, selected, true);
 
-exports.open = function (choices, id) {
-    function PickerButtonClick(event) {
-        if (event.source.id == 'done') {
-            // Trigger a change event for the picker.
-            var selectedRow = $.picker.getSelectedRow(0);
-            $.trigger('change', { 
-                source: $, 
-                type: 'change', 
-                value: selectedRow.title, 
-                id: selectedRow.id 
-            });
-        }
-        // Trigger a done event for the picker.
-        $.trigger('done', {
-            source: $,
-            type: 'done'
+function PickerButtonClick(event) {
+    if (event.source.id == 'done') {
+        // Trigger a change event for the picker.
+        var selectedRow = $.picker.getSelectedRow(0);
+        $.trigger('change', { 
+            source: $, 
+            type: 'change', 
+            value: selectedRow.title, 
+            id: selectedRow.id 
         });
-        if (!Alloy.isTablet) {
-            $.pickerview.animate({ bottom: -Ti.Platform.displayCaps.platformHeight, duration: 500 });   
-            $.parentView.remove($.pickerview);
-        } else {
-            $.popover.hide({ animated:true });
-        }
     }
-
-    $.cancel.on("click", PickerButtonClick);
-    $.done.on("click", PickerButtonClick);
     
+    // Trigger a done event for the picker.
+    $.trigger('done', {
+        source: $,
+        type: 'done'
+    });
+    if (!Alloy.isTablet) {
+        $.pickerview.animate({ bottom: -Ti.Platform.displayCaps.platformHeight, duration: 500 });   
+        $.parentView.remove($.pickerview);
+    } else {
+        $.popover.hide({ animated:true });
+    }
+}
+
+exports.open = function (choices, id) {
 	if (!Alloy.isTablet) {
 		$.parentView.add($.pickerview);
 		$.pickerview.animate({ bottom: 0, duration: 500 });
@@ -67,5 +65,4 @@ exports.open = function (choices, id) {
 	}
 	$.picker.selectionIndicator = true;
 };
-
 

@@ -1,5 +1,5 @@
 <Alloy>
-    <Window class="container">
+    <Window>
         <Widget src="com.orthlieb.combobox" id="country"/>
 	    <View id="swatch"/>
 		<Widget src="com.orthlieb.combobox" id="color"/>

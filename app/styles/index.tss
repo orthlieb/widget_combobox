@@ -1,18 +1,13 @@
-".container": {
-	backgroundColor:"white"
+"#index": {
+	backgroundColor:"white",
+	exitonclose: true
 },
 
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
-}, 
-
 "#swatch": {
-    top: 40, 
+    top: 50, 
     left: 5,
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
     borderColor: "black",
     backgroundColor: "black"    
 },
@@ -21,16 +16,16 @@
     left: 5, 
     top: 5, 
     right: 5, 
-    height: Ti.UI.SIZE, 
+    height: 40, 
     borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
     hintText: 'Select a Country' 
 },
 
 "#color": {
-    left: 40, 
-    top: 40, 
+    left: 50, 
+    top: 50, 
     right: 5, 
-    height: Ti.UI.SIZE, 
+    height: 40, 
     borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
     hintText: 'Select a Color'
 }
