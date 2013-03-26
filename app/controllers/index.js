@@ -55,7 +55,8 @@ var countries = {
 	esh: { title: 'Western Sahara' }, yem: { title: 'Yemen' }, zmb: { title: 'Zambia' }, zwe: { title: 'Zimbabwe' } 
 }
 
-$.country.init({ choices: countries, id: $.country.id, parentView: $.getView() });
+$.country.init($.getView());
+$.country.choices = countries;
 
 $.country.on('change', function (event) {
 	alert('Country changed: ' + event.id + " => " + event.value);
@@ -75,7 +76,8 @@ var colors = {
     violet: { title: "Violet", rgb: "#9400D3" }
 };
 
-$.color.init({ choices: colors, id: $.color.id, parentView: $.getView() });
+$.color.init($.getView());
+$.color.choices = colors;
 
 $.color.on('change', function (event) {
     $.swatch.backgroundColor = colors[event.id].rgb;

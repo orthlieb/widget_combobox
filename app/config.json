@@ -6,6 +6,6 @@
     "os:ios": {},
     "os:android": {},
     "dependencies": {
-        "com.orthlieb.combobox": "1.0"
+        "com.orthlieb.combobox": "2.0"
     }
 }

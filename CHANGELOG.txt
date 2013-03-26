@@ -1,2 +1,3 @@
 01/18/2013 orthlieb Version 1.0: Initial commit
 02/04/2013 orthlieb Version 1.1: Remove dependency on Alloy.Globals.mainWindow (evil) and use a parameter instead. Also support parent styling through .tss file.
+03/25/2013 orthlieb Version 2.0: You can now style the dropButton on the combobox via the parent tss file. Passing in choices and the selected id is no longer supported at init() time, you need to do this explicitly in your code. Styling the combobox is no longer supported at init() time, you need to do this explicitly in the parent .tss file.

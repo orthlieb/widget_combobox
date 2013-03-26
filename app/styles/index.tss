@@ -18,7 +18,12 @@
     right: 5, 
     height: 40, 
     borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-    hintText: 'Select a Country' 
+    hintText: 'Select a Country',
+    dropButton: {
+        color: "black",
+        selectedColor: "yellow",
+        style: Ti.UI.iPhone.SystemButtonStyle.PLAIN
+    }     
 },
 
 "#color": {
@@ -27,5 +32,10 @@
     right: 5, 
     height: 40, 
     borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED, 
-    hintText: 'Select a Color'
+    hintText: 'Select a Color',
+    dropButton: {
+        color: "black",
+        selectedColor: "yellow",
+        style: Ti.UI.iPhone.SystemButtonStyle.PLAIN
+    }     
 }

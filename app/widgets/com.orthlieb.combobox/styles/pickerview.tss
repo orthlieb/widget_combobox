@@ -12,7 +12,7 @@
     left: 0,
     width: Ti.UI.FILL,
     height: 45, 
-	barColor : '#515151' // Putty
+	barColor : '#26688b' // Putty
 },
 "#cancel": { 
 	top: 5, 
