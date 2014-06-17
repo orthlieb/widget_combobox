@@ -52,7 +52,12 @@ function PickerButtonClick(event) {
         $.popover.hide({ animated:true });
     }
 }
-
+function hidePopOver(){
+    $.trigger('done', {
+        source: $,
+        type: 'done'
+    }); 
+}
 exports.open = function (choices, id) {
 	if (!Alloy.isTablet) {
 		$.parentView.add($.pickerview);
