@@ -1,5 +1,5 @@
 <Alloy>
-	<Popover id='popover' ns="Ti.UI.iPad" platform="ios" formFactor="tablet">
+	<Popover id='popover' ns="Ti.UI.iPad" platform="ios" formFactor="tablet" onHide="hidePopOver">
 		<Button id="cancel" onClick="PickerButtonClick">Cancel</Button>
 		<Button id="done" onClick="PickerButtonClick">Done</Button>
 		<Picker id="picker"/>
