@@ -47,7 +47,9 @@ Object.defineProperty($, "id", {
                 var rows = [], i, count = -1, selected = -1;
                 for (i in $.choices) {
                     count++;
-                    if ($._id === i) {
+                    // Do not use ===, it's probable that $._id will be treated as string, 
+                    // so $._id will be different than i (integer)
+                    if ($._id == i) {
                         // Found the selected item.
                         selected = count;
                     }
